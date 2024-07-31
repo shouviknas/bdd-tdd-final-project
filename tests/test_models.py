@@ -105,7 +105,7 @@ class TestProductModel(unittest.TestCase):
     # ADD YOUR TEST CASES HERE
     #
     #Test Case to Read a Product
-    def test_read_a_product(self):
+   def test_read_a_product(self):
         """It should Read a Product"""
         product = ProductFactory()
         product.id = None
@@ -116,7 +116,8 @@ class TestProductModel(unittest.TestCase):
         self.assertEqual(found_product.id, product.id)
         self.assertEqual(found_product.name, product.name)
         self.assertEqual(found_product.description, product.description)
-        self.assert
+        self.assertEqual(found_product.category,product.category)
+        self.assertEqual(found_product.available, product.available)
         self.assertEqual(found_product.price, product.price)
     #Test Case to update a Product    
      def test_update_a_product(self):
